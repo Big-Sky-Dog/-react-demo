@@ -27,6 +27,8 @@
     <title>React App</title>
 
     <script src="http://pv.sohu.com/cityjson?ie=utf-8"></script> <!-- 搜狐 获取ip 内容为  var returnCitySN = Object -->
+
+    <link rel="stylesheet" href="public/Live2D/live2d/css/live2d.css">
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
@@ -41,5 +43,21 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
+
+    <div id="landlord">
+      <div class="message" style="opacity:0"></div>
+      <canvas id="live2d" width="280" height="250" class="live2d"></canvas>
+      <div class="hide-button">隐藏</div>
+    </div>
+    <script type="text/javascript" src="https://cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+    <script type="text/javascript">
+        var message_Path = 'public/Live2D/live2d/'
+        var home_Path = '127.0.0.1:8080'
+    </script>
+    <script type="text/javascript" src="public/Live2D/live2d/js/live2d.js"></script>
+    <script type="text/javascript" src="public/Live2D/live2d/js/message.js"></script>
+    <script type="text/javascript">
+      loadlive2d("live2d", "public/Live2D/live2d/model/tia/model.json");
+    </script>
   </body>
 </html>

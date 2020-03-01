@@ -46,13 +46,13 @@ class Content extends React.Component {
 
   render() {
     return (
-      <div className="weather">
+      <div className="content">
         <div className="main">
           <div className="title">
             <span>{this.state.title}</span>
             <Button type="primary" onClick={() => {history.back()}}>Go back</Button>
           </div>
-          <div className="Content">
+          <div id="Content">
             {
               window.location.pathname == '/content' ?
               <ul>

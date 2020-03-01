@@ -1,4 +1,4 @@
-.weather {
+.content {
   box-sizing: border-box;
   width: 100vw;
   height: 100vh;
@@ -13,7 +13,7 @@
     color: #000;
     padding-top: 63px;
     position: relative;
-    overflow: scroll;
+    height: 100%;
 
     .title {
       font-size: 24px;
@@ -35,8 +35,17 @@
       }
     }
 
-    .Content > div{
-      padding: 0 10px;
+
+    #Content {
+      width: 100%;
+      height: 100%;
+
+      > div{
+        padding: 0 10px;
+        min-width: 100%;
+        min-height: 100%;
+        overflow: scroll;
+      }
     }
   }
 }
